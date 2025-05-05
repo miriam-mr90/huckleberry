@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none"
+        },
+        "singleline": {
+          "delimiter": "comma"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.ts", "**/*.test.tsx"],
+      "rules": {
+        "@typescript-eslint/no-namespace": "off"
+      }
+    }
+  ]
+}
