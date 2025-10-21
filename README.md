@@ -1,10 +1,12 @@
 # Welcome to my Huckleberry project
 
+My personal playground for building small features, exploring ideas, and having fun along the way ✨
+
 ## Project info
 
 **URL**: xxxxxxxxxx
 
-## How can I edit this code?
+## How can you edit this code?
 
 **Use your preferred IDE**
 
@@ -39,3 +41,31 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Apollo Client (GraphQL)
+
+## What can you find in the different pages?
+
+### Rick and Morty
+
+A character gallery that displays characters from the Rick and Morty API using GraphQL queries.
+
+**Features:**
+
+- Fetches character data from the Rick and Morty GraphQL API
+- Displays character information including name, status, species, gender, and image
+- Responsive grid layout
+
+**Technical Notes:**
+
+_GraphQL Query Management:_
+For this project, I've decided to keep things simple and use manual query definitions rather than setting up GraphQL Code Generator. Since I'm working with just a handful of queries, adding code generation would be overkill and bring unnecessary complexity.
+
+### Star Wars Encyclopedia
+
+A static encyclopedia displaying famous characters from the Star Wars universe.
+
+**Features:**
+
+- Static character data (no API calls)
+- Character information including name, role, and description
+- Card-based layout with hover effects
