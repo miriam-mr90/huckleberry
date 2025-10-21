@@ -1,9 +1,29 @@
 import { Link } from 'react-router-dom'
 
+interface NavigationItem {
+  label: string
+  to: string
+}
+
 const Navigation = () => {
+  const items: NavigationItem[] = [
+    {
+      label: 'Home',
+      to: '/',
+    },
+    {
+      label: 'Star Wars',
+      to: '/starwars',
+    },
+    {
+      label: 'Rick and Morty',
+      to: '/rick-and-morty',
+    },
+  ]
+
   return (
     <nav className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
@@ -19,24 +39,15 @@ const Navigation = () => {
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <Link
-                to="/"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
-                Home
-              </Link>
-              <Link
-                to="/starwars"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
-                Star Wars
-              </Link>
-              <Link
-                to="/rick-and-morty"
-                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-              >
-                Rick and Morty
-              </Link>
+              {items.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">

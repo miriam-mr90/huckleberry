@@ -1,28 +1,6 @@
-import { useQuery, gql } from '@apollo/client'
-import { CharactersResponse } from '../types/rick-and-morty'
-
-const GET_CHARACTERS = gql`
-  query GetCharacters($page: Int) {
-    characters(page: $page) {
-      info {
-        count
-        pages
-        next
-        prev
-      }
-      results {
-        id
-        name
-        status
-        species
-        type
-        gender
-        image
-        created
-      }
-    }
-  }
-`
+import { useQuery } from '@apollo/client'
+import { CharactersResponse } from './interfaces'
+import { GET_CHARACTERS } from './queries'
 
 export const RickAndMorty = () => {
   const { loading, error, data } = useQuery<CharactersResponse>(
@@ -32,14 +10,16 @@ export const RickAndMorty = () => {
     }
   )
 
-  if (loading) return <div className="p-4">Loading...</div>
   if (error)
     return <div className="p-4 text-red-500">Error: {error.message}</div>
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 sm:px-6">
       <h1 className="text-3xl font-bold mb-6">Rick and Morty Characters</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      {loading && <div className="text-center">Loading...</div>}
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {data?.characters.results.map((character) => (
           <div
             key={character.id}

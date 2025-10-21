@@ -6,7 +6,9 @@
     "lib": ["es2021", "DOM"],
     "moduleResolution": "bundler",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@pages/*": ["./pages/*"],
+      "@components/*": ["./components/*"]
     },
     "incremental": true,
     "sourceMap": true,

@@ -1,5 +1,3 @@
-import React from 'react'
-
 // Static list of Star Wars characters
 const starWarsCharacters = [
   {
