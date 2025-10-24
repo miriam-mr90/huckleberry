@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
-import { cn } from '../lib/utils'
+import { cn } from '@/lib/utils'
 
 interface NavigationItem {
   label: string
@@ -22,7 +22,7 @@ const Navigation = () => {
   ]
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-white border-b border-gray-200">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex justify-between h-16">
           <div className="flex">

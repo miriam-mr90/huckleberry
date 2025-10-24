@@ -18,7 +18,7 @@
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "resolveJsonModule": true,
     "strict": true,
     "noUncheckedIndexedAccess": true
