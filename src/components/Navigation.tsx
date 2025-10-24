@@ -12,10 +12,6 @@ const Navigation = () => {
 
   const items: NavigationItem[] = [
     {
-      label: 'Home',
-      to: '/',
-    },
-    {
       label: 'Star Wars',
       to: '/starwars',
     },
@@ -33,7 +29,7 @@ const Navigation = () => {
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center space-x-2">
                 <img
-                  src="/src/assets/images/logo.png"
+                  src="./logo.png"
                   alt="Huckleberry Logo"
                   className="h-8 w-8"
                 />
