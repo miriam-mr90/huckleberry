@@ -3,13 +3,14 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
+const VITE_BASENAME = process.env.VITE_BASENAME || '/'
+
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
   },
-  base: process.env.NODE_ENV === 'production' ? '/huckleberry/' : '/',
+  base: process.env.NODE_ENV === 'production' ? VITE_BASENAME : '/',
   plugins: [
     react(),
     mode === 'development' &&

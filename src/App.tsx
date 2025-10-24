@@ -8,9 +8,14 @@ import { StarWarsEncyclopedia } from '@pages/StarWarsEncyclopedia'
 import { RickAndMorty } from '@pages/RickAndMorty'
 import { NotFound } from '@pages/NotFound'
 
+const basename =
+  process.env.NODE_ENV === 'production'
+    ? import.meta.env.VITE_BASENAME || '/'
+    : '/'
+
 export const App = () => (
   <ApolloProvider client={client}>
-    <Router>
+    <Router basename={basename}>
       <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow">
