@@ -8,10 +8,7 @@ import { StarWarsEncyclopedia } from '@pages/StarWarsEncyclopedia'
 import { RickAndMorty } from '@pages/RickAndMorty'
 import { NotFound } from '@pages/NotFound'
 
-const basename =
-  process.env.NODE_ENV === 'production'
-    ? import.meta.env.VITE_BASENAME || '/'
-    : '/'
+const basename = process.env.NODE_ENV === 'production' ? '/huckleberry' : '/'
 
 export const App = () => (
   <ApolloProvider client={client}>
