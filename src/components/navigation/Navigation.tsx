@@ -33,8 +33,8 @@ const Navigation = () => {
                   alt="Huckleberry Logo"
                   className="h-8 w-8"
                 />
-                <span className="text-xl font-bold text-gray-800">
-                  HucklePlay
+                <span className="text-2xl font-bold text-brand-dark">
+                  HuckleLab
                 </span>
               </Link>
             </div>

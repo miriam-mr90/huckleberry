@@ -1,6 +1,6 @@
 # Welcome to my Huckleberry project
 
-HucklePlay is my personal playground for building small features, exploring ideas, and having fun along the way ✨
+HuckleLab is my personal playground for building small features, exploring ideas, and having fun along the way ✨
 
 A space for testing and experimentation — no big frameworks, no deadlines, just curiosity.
 
@@ -109,7 +109,7 @@ npm run dev
 
 ## 🛠️ Peek Behind the Scenes
 
-A quick look at the tech stack, tools, and libraries used to build HucklePlay:
+A quick look at the tech stack, tools, and libraries used to build HuckleLab:
 
 - Vite: Super fast build tool that makes local development smooth and instant.
 - TypeScript: Adds type safety and better structure to the code, keeping things neat.

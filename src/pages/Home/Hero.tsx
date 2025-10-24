@@ -12,8 +12,14 @@ export const Hero = () => {
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 flex flex-col">
           Welcome to my
-          <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent pb-2">
-            Playground
+          <span
+            className="bg-gradient-to-r from-purple-dark via-purple-lavender to-purple-light bg-clip-text text-transparent pb-2"
+            style={{
+              backgroundImage:
+                'linear-gradient(to right, #6f2093, #c084fc, #9e30b8)',
+            }}
+          >
+            HuckleLab
           </span>
         </h1>
 

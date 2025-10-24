@@ -24,7 +24,7 @@ export const ExperimentsSection = () => {
       description:
         'A static encyclopedia displaying famous characters from the Star Wars universe.',
       tags: ['react', 'tailwind_css'],
-      image: '/images/experiments/star-wars.jpg',
+      // image: '/images/experiments/star-wars.jpg',
       status: '🚧 Work in progress',
     },
   ]
