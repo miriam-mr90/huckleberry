@@ -42,7 +42,7 @@ export const ExperimentCard = ({
             className="w-14 h-14 rounded bg-cover bg-center"
             style={{
               backgroundImage: `url(${
-                image ? image : '/images/experiments/hucklelab.png'
+                image ? image : './images/experiments/hucklelab.png'
               })`,
             }}
           />
