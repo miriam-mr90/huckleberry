@@ -1,6 +1,9 @@
 # Welcome to my Huckleberry project
 
-My personal playground for building small features, exploring ideas, and having fun along the way ✨
+HucklePlay is my personal playground for building small features, exploring ideas, and having fun along the way ✨
+A space for testing and experimentation — no big frameworks, no deadlines, just curiosity.
+
+This is a simple React application built with TypeScript, Tailwind, CSS, Jest, and Prettier. Navigate to the Star Wars Encyclopedia to see a list of characters.
 
 ## Project info
 
