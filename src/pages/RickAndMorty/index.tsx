@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client'
 import { CharactersResponse } from './interfaces'
 import { GET_CHARACTERS } from './queries'
+import { CharacterCard } from './CharacterCard'
 
 export const RickAndMorty = () => {
   const { loading, error, data } = useQuery<CharactersResponse>(
@@ -17,43 +18,31 @@ export const RickAndMorty = () => {
     <div className="container mx-auto p-4 sm:px-6">
       <h1 className="text-3xl font-bold mb-6">Rick and Morty Characters</h1>
 
-      {loading && <div className="text-center">Loading...</div>}
-
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {data?.characters.results.map((character) => (
-          <div
-            key={character.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden"
-          >
-            <img
-              src={character.image}
-              alt={character.name}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-xl font-semibold mb-2">{character.name}</h2>
-              <div className="space-y-1">
-                <p>
-                  <span className="font-medium">Status:</span>{' '}
-                  {character.status}
-                </p>
-                <p>
-                  <span className="font-medium">Species:</span>{' '}
-                  {character.species}
-                </p>
-                <p>
-                  <span className="font-medium">Gender:</span>{' '}
-                  {character.gender}
-                </p>
-                {character.type && (
-                  <p>
-                    <span className="font-medium">Type:</span> {character.type}
-                  </p>
-                )}
+        {loading
+          ? Array.from({ length: 8 }).map((_, index) => (
+              <div className="bg-card rounded-lg overflow-hidden shadow-card animate-pulse">
+                <div className="aspect-square bg-muted" />
+                <div className="p-4 space-y-3">
+                  <div className="h-5 bg-muted rounded w-3/4" />
+                  <div className="space-y-2">
+                    <div className="h-4 bg-muted rounded w-full" />
+                    <div className="h-4 bg-muted rounded w-full" />
+                    <div className="h-4 bg-muted rounded w-5/6" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
+            ))
+          : data?.characters.results.map((character, index) => (
+              <CharacterCard
+                image={character.image}
+                name={character.name}
+                status={character.status}
+                species={character.species}
+                gender={character.gender}
+                type={character.type}
+              />
+            ))}
       </div>
     </div>
   )
