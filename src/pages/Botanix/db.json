@@ -1,0 +1,255 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "common_name": "Poto",
+      "scientific_name": "Epipremnum aureum",
+      "care": "Fácil",
+      "light": "Indirecta",
+      "climate": "Templado",
+      "characteristics": [
+        "Trepadora",
+        "Purifica el aire",
+        "Resistente a la falta de agua"
+      ],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Fácil",
+        "use": "Purificadora del aire",
+        "exposure": "Luz indirecta"
+      }
+    },
+    {
+      "id": 2,
+      "common_name": "Sansevieria / Lengua de suegra",
+      "scientific_name": "Sansevieria trifasciata",
+      "care": "Muy fácil",
+      "light": "Indirecta o baja",
+      "climate": "Cálido",
+      "characteristics": ["Tolerante a sequía", "Ideal para principiantes"],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Fácil",
+        "use": "Purificadora del aire",
+        "exposure": "Baja luz"
+      }
+    },
+    {
+      "id": 3,
+      "common_name": "Monstera / Costilla de Adán",
+      "scientific_name": "Monstera deliciosa",
+      "care": "Media",
+      "light": "Indirecta brillante",
+      "climate": "Templado-húmedo",
+      "characteristics": ["Hojas grandes y decorativas", "Necesita tutor"],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Medio",
+        "use": "Decorativa de follaje",
+        "exposure": "Luz indirecta brillante"
+      }
+    },
+    {
+      "id": 4,
+      "common_name": "Ficus lyrata / Higuera lira",
+      "scientific_name": "Ficus lyrata",
+      "care": "Media",
+      "light": "Indirecta brillante",
+      "climate": "Cálido",
+      "characteristics": ["Follaje elegante", "Sensible a cambios de ambiente"],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Medio",
+        "use": "Decorativa de follaje",
+        "exposure": "Luz indirecta brillante"
+      }
+    },
+    {
+      "id": 5,
+      "common_name": "Zamioculca",
+      "scientific_name": "Zamioculcas zamiifolia",
+      "care": "Muy fácil",
+      "light": "Indirecta",
+      "climate": "Cálido-seco",
+      "characteristics": ["Tolera poca luz", "Tolera riego escaso"],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Fácil",
+        "use": "Purificadora del aire",
+        "exposure": "Luz indirecta"
+      }
+    },
+    {
+      "id": 6,
+      "common_name": "Calatea",
+      "scientific_name": "Calathea spp.",
+      "care": "Exigente",
+      "light": "Indirecta",
+      "climate": "Húmedo",
+      "characteristics": ["Hojas ornamentales", "Necesita humedad constante"],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Exigente",
+        "use": "Decorativa de follaje",
+        "exposure": "Luz indirecta"
+      }
+    },
+    {
+      "id": 7,
+      "common_name": "Helecho de Boston",
+      "scientific_name": "Nephrolepis exaltata",
+      "care": "Media",
+      "light": "Indirecta",
+      "climate": "Húmedo-fresco",
+      "characteristics": ["Ideal para baños", "Ama la humedad"],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Medio",
+        "use": "Decorativa de follaje",
+        "exposure": "Luz indirecta"
+      }
+    },
+    {
+      "id": 8,
+      "common_name": "Orquídea Phalaenopsis",
+      "scientific_name": "Phalaenopsis spp.",
+      "care": "Media",
+      "light": "Indirecta brillante",
+      "climate": "Cálido-húmedo",
+      "characteristics": ["Floración duradera", "Requiere riego cuidadoso"],
+      "category": {
+        "environment": "Interior",
+        "care_level": "Exigente",
+        "use": "Decorativa floral",
+        "exposure": "Luz indirecta brillante"
+      }
+    },
+    {
+      "id": 9,
+      "common_name": "Lavanda",
+      "scientific_name": "Lavandula angustifolia",
+      "care": "Fácil",
+      "light": "Pleno sol",
+      "climate": "Seco-mediterráneo",
+      "characteristics": [
+        "Aroma intenso",
+        "Atrae abejas",
+        "Resistente a sequía"
+      ],
+      "category": {
+        "environment": "Exterior",
+        "care_level": "Fácil",
+        "use": "Aromática",
+        "exposure": "Sol directo"
+      }
+    },
+    {
+      "id": 10,
+      "common_name": "Rosal",
+      "scientific_name": "Rosa spp.",
+      "care": "Media",
+      "light": "Sol directo",
+      "climate": "Templado",
+      "characteristics": ["Flores decorativas", "Requiere poda anual"],
+      "category": {
+        "environment": "Exterior",
+        "care_level": "Medio",
+        "use": "Decorativa floral",
+        "exposure": "Sol directo"
+      }
+    },
+    {
+      "id": 11,
+      "common_name": "Geranio",
+      "scientific_name": "Pelargonium spp.",
+      "care": "Fácil",
+      "light": "Sol directo",
+      "climate": "Cálido",
+      "characteristics": ["Floración abundante", "Ideal en macetas"],
+      "category": {
+        "environment": "Exterior",
+        "care_level": "Fácil",
+        "use": "Decorativa floral",
+        "exposure": "Sol directo"
+      }
+    },
+    {
+      "id": 12,
+      "common_name": "Bugambilia / Buganvilla",
+      "scientific_name": "Bougainvillea spp.",
+      "care": "Media",
+      "light": "Sol directo",
+      "climate": "Cálido",
+      "characteristics": ["Trepadora colorida", "Muy resistente al calor"],
+      "category": {
+        "environment": "Exterior",
+        "care_level": "Medio",
+        "use": "Decorativa floral",
+        "exposure": "Sol directo"
+      }
+    },
+    {
+      "id": 13,
+      "common_name": "Hortensia",
+      "scientific_name": "Hydrangea macrophylla",
+      "care": "Media",
+      "light": "Semisombra",
+      "climate": "Húmedo",
+      "characteristics": ["Flores grandes", "Cambia color según pH del suelo"],
+      "category": {
+        "environment": "Exterior",
+        "care_level": "Medio",
+        "use": "Decorativa floral",
+        "exposure": "Semisombra"
+      }
+    },
+    {
+      "id": 14,
+      "common_name": "Jazmín",
+      "scientific_name": "Jasminum officinale",
+      "care": "Media",
+      "light": "Sol directo",
+      "climate": "Cálido",
+      "characteristics": ["Trepadora", "Flores fragantes"],
+      "category": {
+        "environment": "Exterior",
+        "care_level": "Medio",
+        "use": "Aromática",
+        "exposure": "Sol directo"
+      }
+    },
+    {
+      "id": 15,
+      "common_name": "Césped / Grama",
+      "scientific_name": "Cynodon dactylon",
+      "care": "Media",
+      "light": "Sol directo",
+      "climate": "Variado",
+      "characteristics": [
+        "Cobertura de suelo",
+        "Requiere riego y corte frecuente"
+      ],
+      "category": {
+        "environment": "Exterior",
+        "care_level": "Medio",
+        "use": "Cobertura de suelo",
+        "exposure": "Sol directo"
+      }
+    },
+    {
+      "id": 16,
+      "common_name": "Suculentas y cactus",
+      "scientific_name": "Echeveria, Opuntia, etc.",
+      "care": "Muy fácil",
+      "light": "Sol directo",
+      "climate": "Árido",
+      "characteristics": ["Bajo mantenimiento", "Riego escaso"],
+      "category": {
+        "environment": "Mixto",
+        "care_level": "Fácil",
+        "use": "Decorativa y resistente",
+        "exposure": "Sol directo"
+      }
+    }
+  ]
+}

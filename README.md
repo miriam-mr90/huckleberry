@@ -43,6 +43,13 @@ Explore a wide variety of plants, add, edit, or remove entries, and easily searc
 - Search and filter functionality
 - Plant care instructions and details
 
+**Technical Notes:**
+
+- **Database:** In development, Botanix uses `json-server` to serve data from `src/pages/Botanix/db.json`, which contains a structured array of plant objects.
+- **Production:** On GitHub Pages, Botanix fetches data from a static file located at `/public/db_botanix.json`. This file is read-only, so any mutations (add/edit/delete) are not supported in production.
+- **Unified API Endpoint:** The frontend always fetches from `/api/plants`. In development, Vite's proxy redirects this to `json-server`, and in production, it fetches the static JSON file.
+- **Limitations:** Since the production version relies on a static JSON file, the content cannot be mutated. Operations are read-only. Any changes to plant data require updating the JSON file and redeploying.
+
 ## 🚀 GitHub Pages Deployment
 
 This project is deployed to **GitHub Pages** and is publicly accessible at:
@@ -128,3 +135,4 @@ A quick look at the tech stack, tools, and libraries used to build HuckleLab:
 - React: The heart of the project, building the interactive UI with reusable components.
 - Tailwind CSS: Utility-first CSS framework for styling fast and responsively.
 - Apollo Client (GraphQL): Handles data fetching and state management when working with GraphQL APIs.
+- JSON server: Provides a simple mock REST API for local development, allowing the frontend to fetch data without setting up a full backend.
