@@ -19,6 +19,10 @@ const Navigation = () => {
       label: 'Rick and Morty',
       to: '/rick-and-morty',
     },
+    {
+      label: 'Botanix',
+      to: '/botanix',
+    },
   ]
 
   return (

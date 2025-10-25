@@ -7,6 +7,8 @@ import { Home } from '@pages/Home'
 import { StarWarsEncyclopedia } from '@pages/StarWarsEncyclopedia'
 import { RickAndMorty } from '@pages/RickAndMorty'
 import { NotFound } from '@pages/NotFound'
+import { BotanixPage } from './pages/Botanix'
+import { Footer } from '@components/Footer'
 
 const basename = process.env.NODE_ENV === 'production' ? '/huckleberry' : '/'
 
@@ -20,9 +22,11 @@ export const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/starwars" element={<StarWarsEncyclopedia />} />
             <Route path="/rick-and-morty" element={<RickAndMorty />} />
+            <Route path="/botanix" element={<BotanixPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   </ApolloProvider>
