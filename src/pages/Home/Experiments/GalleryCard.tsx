@@ -1,3 +1,5 @@
+import { ASSETS_BASE } from '@/config'
+
 export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss' | 'json_server'
 
 interface Props {
@@ -28,7 +30,11 @@ export const GalleryCard = ({
       <div className="relative">
         <img
           className="w-full filter brightness-90 saturate-75"
-          src={image ? image : './images/experiments/hucklelab.png'}
+          src={
+            image
+              ? `${ASSETS_BASE}${image}`
+              : `${ASSETS_BASE}images/experiments/hucklelab.png`
+          }
           alt={title}
         />
 
