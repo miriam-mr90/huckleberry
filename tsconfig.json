@@ -7,8 +7,8 @@
     "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./src/*"],
-      "@pages/*": ["./pages/*"],
-      "@components/*": ["./components/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"]
     },
     "incremental": true,
     "sourceMap": true,
