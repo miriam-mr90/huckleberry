@@ -1,4 +1,5 @@
 import { ExperimentCard, Tag } from './ExperimentCard'
+import { GalleryCard } from './GalleryCard'
 
 interface Experiment {
   title: string
@@ -12,19 +13,27 @@ interface Experiment {
 export const ExperimentsSection = () => {
   const experiments: Experiment[] = [
     {
-      title: 'Rick and Morty',
+      title: 'Rick and Morty characters gallery',
       description:
         'A character gallery that displays characters from the Rick and Morty API using GraphQL queries.',
       tags: ['react', 'graphql', 'tailwind_css'],
       image: './images/experiments/rick-and-morty.jpg',
-      status: '✔️ Finished',
+      status: '✅ Finished',
     },
     {
-      title: 'Star Wars',
+      title: 'Star Wars Encyclopedia',
       description:
         'A static encyclopedia displaying famous characters from the Star Wars universe.',
       tags: ['react', 'tailwind_css'],
-      // image: './images/experiments/star-wars.jpg',
+      image: './images/experiments/star-wars.jpg',
+      status: '🚧 Work in progress',
+    },
+    {
+      title: 'Botanix',
+      description:
+        'Botanix: Explore a wide variety of plants, add, edit, or remove entries, and easily search or filter your plant collection.',
+      tags: ['react', 'json_server'],
+      image: './images/experiments/botanix.jpg',
       status: '🚧 Work in progress',
     },
   ]
@@ -47,6 +56,18 @@ export const ExperimentsSection = () => {
             image={item.image}
             link={item.link}
             status={item.status}
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+        {experiments.map((item) => (
+          <GalleryCard
+            key={item.title}
+            title={item.title}
+            description={item.description}
+            tags={item.tags}
+            image={item.image}
+            link={item.link}
           />
         ))}
       </div>

@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 
-export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss'
+export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss' | 'json_server'
 
 interface Props {
   title: string
@@ -24,6 +24,7 @@ export const ExperimentCard = ({
     graphql: 'bg-pink-100 text-pink-800',
     tailwind_css: 'bg-green-100 text-green-800',
     scss: 'bg-yellow-100 text-yellow-800',
+    json_server: 'bg-gray-100 text-gray-800',
   }
 
   const tagLabels: Record<Tag, string> = {
@@ -31,9 +32,9 @@ export const ExperimentCard = ({
     graphql: 'GraphQL',
     tailwind_css: 'Tailwind CSS',
     scss: 'SCSS',
+    json_server: 'JSON Server',
   }
 
-  console.log(image)
   return (
     <div className="pt-6 px-6 py-4 rounded border border-gray-100 shadow-sm bg-white flex flex-col">
       <div className="pb-4">
@@ -52,7 +53,9 @@ export const ExperimentCard = ({
             </span>
           )}
         </div>
-        <h4 className="text-lg mt-6 mb-1">{title}</h4>
+        <h4 className="font-semibold mt-6 mb-1 text-brand-highlight">
+          {title}
+        </h4>
         <p className="text-muted-foreground text-base">{description}</p>
       </div>
       {tags && (
