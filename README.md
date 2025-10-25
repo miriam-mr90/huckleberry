@@ -32,6 +32,17 @@ A static encyclopedia displaying famous characters from the Star Wars universe.
 - Character information including name, role, and description
 - Card-based layout with hover effects
 
+### Botanix 🚧
+
+Explore a wide variety of plants, add, edit, or remove entries, and easily search or filter your plant collection.
+
+**Features:**
+
+- Browse a collection of plants
+- Add, edit, and remove plant entries
+- Search and filter functionality
+- Plant care instructions and details
+
 ## 🚀 GitHub Pages Deployment
 
 This project is deployed to **GitHub Pages** and is publicly accessible at:
