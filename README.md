@@ -99,6 +99,18 @@ GitHub Pages serves:
 https://miriam-mr90.github.io/huckleberry/
 ```
 
+## 🛠️ Peek Behind the Scenes
+
+A quick look at the tech stack, tools, and libraries used to build HuckleLab:
+
+- Vite: Super fast build tool that makes local development smooth and instant.
+- TypeScript: Adds type safety and better structure to the code, keeping things neat.
+- Radix UI: A set of accessible, unstyled components that make it easy to build flexible UIs.
+- React: The heart of the project, building the interactive UI with reusable components.
+- Tailwind CSS: Utility-first CSS framework for styling fast and responsively.
+- Apollo Client (GraphQL): Handles data fetching and state management when working with GraphQL APIs.
+- JSON server: Provides a simple mock REST API for local development, allowing the frontend to fetch data without setting up a full backend.
+
 ## 👩‍💻 How can you edit this code?
 
 **Use your preferred IDE**
@@ -113,9 +125,17 @@ Follow these steps:
 # Step 1: Install the necessary dependencies.
 npm i
 
-# Step 2: Start the development server with auto-reloading and an instant preview.
+# Step 2: Start the local API (json-server) for Botanix
+npm run json-server
+
+# Step 3: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
+
+**Notes:**
+
+- `npm run json-server` serves the Botanix data at http://localhost:4001/plants.
+- `npm run dev` runs the frontend with Vite; it automatically proxies /api/plants to the json-server in development.
 
 **Use GitHub Codespaces**
 
@@ -124,15 +144,3 @@ npm run dev
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## 🛠️ Peek Behind the Scenes
-
-A quick look at the tech stack, tools, and libraries used to build HuckleLab:
-
-- Vite: Super fast build tool that makes local development smooth and instant.
-- TypeScript: Adds type safety and better structure to the code, keeping things neat.
-- Radix UI: A set of accessible, unstyled components that make it easy to build flexible UIs.
-- React: The heart of the project, building the interactive UI with reusable components.
-- Tailwind CSS: Utility-first CSS framework for styling fast and responsively.
-- Apollo Client (GraphQL): Handles data fetching and state management when working with GraphQL APIs.
-- JSON server: Provides a simple mock REST API for local development, allowing the frontend to fetch data without setting up a full backend.
