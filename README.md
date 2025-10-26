@@ -62,37 +62,9 @@ A quick look at the tech stack, tools, and libraries used to build HuckleLab:
 - Apollo Client (GraphQL): Handles data fetching and state management when working with GraphQL APIs.
 - JSON server: Provides a simple mock REST API for local development, allowing the frontend to fetch data without setting up a full backend.
 
-## 🚀 GitHub Pages Deployment
-
-This project is deployed to **GitHub Pages** and is publicly accessible at:
-
-**[https://miriam-mr90.github.io/huckleberry/](https://miriam-mr90.github.io/huckleberry/)**
-
-### How it works
-
-1. **Automatic deployment via GitHub Actions**
-
-   - The repository includes a workflow file `deploy.yml` that handles deploying the project to GitHub Pages.
-   - This workflow is triggered **every time changes are pushed to the `main` branch**.
-
-2. **Build process**
-
-   - The workflow installs dependencies and runs the build script (`npm run build`) to generate the production-ready files in the `dist/` folder.
-   - Vite is configured with `base: './'`, so all assets (CSS, JS, images) are served correctly in GitHub Pages.
-
-3. **Deployment to `gh-pages` branch**
-
-   - After the build, the workflow uses `peaceiris/actions-gh-pages` to push the contents of the `dist/` folder to the `gh-pages` branch.
-   - The `clean: true` option ensures that old files are removed, so the branch always reflects the latest build.
-
-4. **Result**
-   - The `gh-pages` branch contains the production-ready version of the app.
-   - GitHub Pages serves this branch at `https://miriam-mr90.github.io/huckleberry/`, so anyone can see the live version of the project.
-   - All future updates to `main` automatically trigger the workflow, rebuilding and redeploying the site.
-
 ## 🚀 Deployment
 
-This project can be deployed either to **GitHub Pages** or **Vercel**. Both deployments are public and accessible without requiring authentication (unless explicitly configured).
+This project can be deployed either to **GitHub Pages** or **Vercel**. Both deployments are public and accessible without requiring authentication.
 
 ---
 
