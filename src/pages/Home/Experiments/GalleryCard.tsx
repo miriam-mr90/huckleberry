@@ -1,5 +1,5 @@
 import hucklelabImg from '@/assets/images/experiments/hucklelab.png'
-import { Link } from 'react-router-dom'
+import { Link } from '@/components/Link'
 
 export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss' | 'json_server'
 
