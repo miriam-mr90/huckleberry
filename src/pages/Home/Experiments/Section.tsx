@@ -1,5 +1,8 @@
 import { ExperimentCard, Tag } from './ExperimentCard'
 import { GalleryCard } from './GalleryCard'
+import rickAndMortyImg from '@/assets/images/experiments/rick-and-morty.jpg'
+import starWarsImg from '@/assets/images/experiments/star-wars.jpg'
+import botanixImg from '@/assets/images/experiments/botanix.jpg'
 
 interface Experiment {
   title: string
@@ -17,24 +20,27 @@ export const ExperimentsSection = () => {
       description:
         'A character gallery that displays characters from the Rick and Morty API using GraphQL queries.',
       tags: ['react', 'graphql', 'tailwind_css'],
-      image: 'images/experiments/rick-and-morty.jpg',
+      image: rickAndMortyImg,
       status: '✅ Finished',
+      link: '/rick-and-morty',
     },
     {
       title: 'Star Wars Encyclopedia',
       description:
         'A static encyclopedia displaying famous characters from the Star Wars universe.',
       tags: ['react', 'tailwind_css'],
-      image: 'images/experiments/star-wars.jpg',
+      image: starWarsImg,
       status: '🚧 Work in progress',
+      link: '/starwars',
     },
     {
       title: 'Botanix',
       description:
         'Botanix: Explore a wide variety of plants, add, edit, or remove entries, and easily search or filter your plant collection.',
       tags: ['react', 'json_server'],
-      image: 'images/experiments/botanix.jpg',
+      image: botanixImg,
       status: '🚧 Work in progress',
+      link: '/botanix',
     },
   ]
 
