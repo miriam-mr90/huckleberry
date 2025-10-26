@@ -1,4 +1,4 @@
-import { ASSETS_BASE } from '@/config'
+import hucklelabImg from '@/assets/images/experiments/hucklelab.png'
 
 export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss' | 'json_server'
 
@@ -30,11 +30,7 @@ export const GalleryCard = ({
       <div className="relative">
         <img
           className="w-full filter brightness-90 saturate-75"
-          src={
-            image
-              ? `${ASSETS_BASE}${image}`
-              : `${ASSETS_BASE}images/experiments/hucklelab.png`
-          }
+          src={image || hucklelabImg}
           alt={title}
         />
 

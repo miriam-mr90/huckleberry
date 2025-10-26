@@ -1,5 +1,5 @@
-import { ASSETS_BASE } from '@/config'
 import { cn } from '@/lib/utils'
+import hucklelabImg from '@/assets/images/experiments/hucklelab.png'
 
 export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss' | 'json_server'
 
@@ -43,11 +43,7 @@ export const ExperimentCard = ({
           <div
             className="w-14 h-14 rounded bg-cover bg-center"
             style={{
-              backgroundImage: `url(${
-                image
-                  ? `${ASSETS_BASE}${image}`
-                  : `${ASSETS_BASE}images/experiments/hucklelab.png`
-              })`,
+              backgroundImage: `url(${image || hucklelabImg})`,
             }}
           />
           {status && (

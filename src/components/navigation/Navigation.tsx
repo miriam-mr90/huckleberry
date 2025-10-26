@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import * as NavigationMenu from '@radix-ui/react-navigation-menu'
 import { cn } from '@/lib/utils'
-import { ASSETS_BASE } from '@/config'
+import logoImg from '@/assets/images/logo.png'
 
 interface NavigationItem {
   label: string
@@ -33,11 +33,7 @@ const Navigation = () => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="flex items-center space-x-2">
-                <img
-                  src={`${ASSETS_BASE}logo.png`}
-                  alt="Huckleberry Logo"
-                  className="h-8 w-8"
-                />
+                <img src={logoImg} alt="Huckleberry Logo" className="h-8 w-8" />
                 <span className="text-2xl font-bold text-brand-dark">
                   HuckleLab
                 </span>
