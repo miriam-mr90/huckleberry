@@ -50,6 +50,18 @@ Explore a wide variety of plants, add, edit, or remove entries, and easily searc
 - **Unified API Endpoint:** The frontend always fetches from `/api/plants`. In development, Vite's proxy redirects this to `json-server`, and in production, it fetches the static JSON file.
 - **Limitations:** Since the production version relies on a static JSON file, the content cannot be mutated. Operations are read-only. Any changes to plant data require updating the JSON file and redeploying.
 
+## 🛠️ Peek Behind the Scenes
+
+A quick look at the tech stack, tools, and libraries used to build HuckleLab:
+
+- Vite: Super fast build tool that makes local development smooth and instant.
+- TypeScript: Adds type safety and better structure to the code, keeping things neat.
+- Radix UI: A set of accessible, unstyled components that make it easy to build flexible UIs.
+- React: The heart of the project, building the interactive UI with reusable components.
+- Tailwind CSS: Utility-first CSS framework for styling fast and responsively.
+- Apollo Client (GraphQL): Handles data fetching and state management when working with GraphQL APIs.
+- JSON server: Provides a simple mock REST API for local development, allowing the frontend to fetch data without setting up a full backend.
+
 ## 🚀 GitHub Pages Deployment
 
 This project is deployed to **GitHub Pages** and is publicly accessible at:
@@ -78,10 +90,45 @@ This project is deployed to **GitHub Pages** and is publicly accessible at:
    - GitHub Pages serves this branch at `https://miriam-mr90.github.io/huckleberry/`, so anyone can see the live version of the project.
    - All future updates to `main` automatically trigger the workflow, rebuilding and redeploying the site.
 
-### Deployment Process
+## 🚀 Deployment
+
+This project can be deployed either to **GitHub Pages** or **Vercel**. Both deployments are public and accessible without requiring authentication (unless explicitly configured).
+
+---
+
+### GitHub Pages Deployment
+
+> ⚠️ **Warning:** Due to GitHub Pages serving the site under a subpath (`/huckleberry/`), some image URLs may break when navigating between pages. Images work correctly in production on Vercel or other static hosts that serve from the root (`/`) without a subpath.
+
+**Live URL:** [https://miriam-mr90.github.io/huckleberry/](https://miriam-mr90.github.io/huckleberry/)
+
+#### How it works
+
+1. **Automatic deployment via GitHub Actions**
+
+   - The repository includes a workflow file `deploy.yml` that handles deploying the project to GitHub Pages.
+   - This workflow is triggered **every time changes are pushed to the `main` branch**.
+
+2. **Build process**
+
+   - The workflow installs dependencies and runs the build script (`npm run build`) to generate the production-ready files in the `dist/` folder.
+   - Vite is configured with `base: './'`, so all assets (CSS, JS, images) are served correctly in GitHub Pages.
+
+3. **Deployment to `gh-pages` branch**
+
+   - After the build, the workflow uses `peaceiris/actions-gh-pages` to push the contents of the `dist/` folder to the `gh-pages` branch.
+   - The `clean: true` option ensures that old files are removed, so the branch always reflects the latest build.
+
+4. **Result**
+
+   - The `gh-pages` branch contains the production-ready version of the app.
+   - GitHub Pages serves this branch at the URL above.
+   - All future updates to `main` automatically trigger the workflow, rebuilding and redeploying the site.
+
+#### Deployment Process
 
 ```text
-master branch (source code)
+main branch (source code)
         │
         │ Push changes
         ▼
@@ -99,17 +146,54 @@ GitHub Pages serves:
 https://miriam-mr90.github.io/huckleberry/
 ```
 
-## 🛠️ Peek Behind the Scenes
+### Vercel Deployment
 
-A quick look at the tech stack, tools, and libraries used to build HuckleLab:
+**Live URL:** [https://huckleberry-<your-project-id>-miriams-projects-9a782c32.vercel.app/](huckleberry-git-master-miriams-projects-9a782c32.vercel.app/)
 
-- Vite: Super fast build tool that makes local development smooth and instant.
-- TypeScript: Adds type safety and better structure to the code, keeping things neat.
-- Radix UI: A set of accessible, unstyled components that make it easy to build flexible UIs.
-- React: The heart of the project, building the interactive UI with reusable components.
-- Tailwind CSS: Utility-first CSS framework for styling fast and responsively.
-- Apollo Client (GraphQL): Handles data fetching and state management when working with GraphQL APIs.
-- JSON server: Provides a simple mock REST API for local development, allowing the frontend to fetch data without setting up a full backend.
+#### How it works
+
+1. **Automatic deployment via GitHub Actions**
+
+   - The repository includes a workflow file `deploy-vercel.yml` that handles deploying the project to Vercel.
+   - This workflow is triggered **every time changes are pushed to the `prod` branch**.
+
+2. **Build process**
+
+   - The workflow installs dependencies and runs the build script (`npm run build`) to generate the production-ready files in the `dist/` folder.
+   - Vite is configured with `base: '/'`, ensuring all assets (CSS, JS, images) work correctly on Vercel's hosting.
+
+3. **Deployment to Vercel**
+
+   - After the build, the workflow uses `amondnet/vercel-action` to deploy the `dist/` folder to the linked Vercel project.
+   - The `--prod` argument ensures that the deployment goes to production, not a preview environment.
+   - Vercel automatically handles routing, asset hashing, and caching for optimal performance.
+
+4. **Result**
+
+   - The live production version is served at the URL above.
+   - Every push to the `prod` branch triggers the workflow, automatically building and deploying the latest version.
+   - The site is publicly accessible without requiring a Vercel account, unless authentication is enabled.
+
+#### Deployment Process
+
+```text
+prod branch (source code)
+        │
+        │ Push changes
+        ▼
+  GitHub Actions Workflow (`deploy-vercel.yml`)
+        │
+        │ Runs:
+        │ - npm install
+        │ - npm run build
+        │ - Deploy dist/ to Vercel (--prod)
+        ▼
+   Vercel project (production build)
+        │
+        ▼
+Vercel serves:
+huckleberry-git-master-miriams-projects-9a782c32.vercel.app/
+```
 
 ## 👩‍💻 How can you edit this code?
 
