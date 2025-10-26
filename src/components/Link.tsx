@@ -5,9 +5,10 @@ interface LinkProps {
   to: string
   children: ReactNode
   ariaLabel?: string
+  className?: string
 }
 
-export const Link = ({ to, children, ariaLabel }: LinkProps) => {
+export const Link = ({ to, children, ariaLabel, className }: LinkProps) => {
   const navigate = useNavigate()
 
   const handleClick = (e: React.MouseEvent | React.KeyboardEvent) => {
@@ -44,6 +45,7 @@ export const Link = ({ to, children, ariaLabel }: LinkProps) => {
       role={typeof children === 'string' ? undefined : 'link'}
       aria-label={ariaLabel}
       tabIndex={0}
+      className={className}
     >
       {children}
     </a>
