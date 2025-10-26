@@ -10,7 +10,13 @@ import { NotFound } from '@pages/NotFound'
 import { BotanixPage } from './pages/Botanix'
 import { Footer } from '@components/Footer'
 
-const basename = process.env.NODE_ENV === 'production' ? '/huckleberry' : '/'
+/** Dynamically set the router basename depending on the environment:
+ * - On GitHub Pages, detects the subpath automatically (e.g., /huckleberry).
+ * - On Vercel or other root deployments, uses "/" as the base.
+ */
+const basename = import.meta.env.PROD
+  ? window.location.pathname.replace(/\/$/, '') // GitHub Pages
+  : '/' // Vercel
 
 export const App = () => (
   <ApolloProvider client={client}>

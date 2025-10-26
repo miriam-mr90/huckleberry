@@ -1,6 +1,4 @@
 export const BOTANIX_API_URL =
-  import.meta.env.MODE === 'development'
-    ? '/api/plants' // dev → Vite proxy
-    : `${import.meta.env.BASE_URL}db_botanix.json`; // production → static file
+  import.meta.env.DEV ? '/api/plants' : './db_botanix.json'
 
-export const ASSETS_BASE = import.meta.env.BASE_URL ?? '/';
+export const ASSETS_BASE = import.meta.env.BASE_URL ?? '/'
