@@ -15,6 +15,7 @@ import {
   useQuery,
 } from '@tanstack/react-query'
 import { BOTANIX_API_URL } from '@/config'
+import { Table } from './components/Table'
 
 const queryClient = new QueryClient()
 
@@ -41,22 +42,7 @@ export const BotanixContent = () => {
 
   return (
     <div className="page-container">
-      {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-
-      <ul>
-        {data.map(
-          (plant: {
-            id: number
-            common_name: string
-            climate: string
-            care: string
-          }) => (
-            <li key={plant.id}>
-              {plant.common_name} - {plant.climate} - {plant.care}
-            </li>
-          )
-        )}
-      </ul>
+      <Table plants={data} />
     </div>
   )
 }
