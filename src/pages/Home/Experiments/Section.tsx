@@ -37,7 +37,7 @@ export const ExperimentsSection = () => {
       title: 'Botanix',
       description:
         'Botanix: Explore a wide variety of plants, add, edit, or remove entries, and easily search or filter your plant collection.',
-      tags: ['react', 'json_server'],
+      tags: ['react', 'json_server', 'freamer_motion'],
       image: botanixImg,
       status: '🚧 Work in progress',
       link: '/botanix',

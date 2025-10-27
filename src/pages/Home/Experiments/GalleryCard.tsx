@@ -1,8 +1,13 @@
 import hucklelabImg from '@/assets/images/experiments/hucklelab.png'
 import { Link } from '@/components/Link'
 
-export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss' | 'json_server'
-
+export type Tag =
+  | 'react'
+  | 'graphql'
+  | 'tailwind_css'
+  | 'scss'
+  | 'json_server'
+  | 'freamer_motion'
 interface Props {
   title: string
   description: string
@@ -24,6 +29,7 @@ export const GalleryCard = ({
     tailwind_css: 'Tailwind CSS',
     scss: 'SCSS',
     json_server: 'JSON Server',
+    freamer_motion: 'Framer Motion',
   }
 
   return (

@@ -1,7 +1,13 @@
 import { cn } from '@/lib/utils'
 import hucklelabImg from '@/assets/images/experiments/hucklelab.png'
 
-export type Tag = 'react' | 'graphql' | 'tailwind_css' | 'scss' | 'json_server'
+export type Tag =
+  | 'react'
+  | 'graphql'
+  | 'tailwind_css'
+  | 'scss'
+  | 'json_server'
+  | 'freamer_motion'
 
 interface Props {
   title: string
@@ -26,6 +32,7 @@ export const ExperimentCard = ({
     tailwind_css: 'bg-green-100 text-green-800',
     scss: 'bg-yellow-100 text-yellow-800',
     json_server: 'bg-gray-100 text-gray-800',
+    freamer_motion: 'bg-purple-100 text-purple-800',
   }
 
   const tagLabels: Record<Tag, string> = {
@@ -34,6 +41,7 @@ export const ExperimentCard = ({
     tailwind_css: 'Tailwind CSS',
     scss: 'SCSS',
     json_server: 'JSON Server',
+    freamer_motion: 'Framer Motion',
   }
 
   return (
