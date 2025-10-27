@@ -7,7 +7,7 @@ import {
   getClimateType,
   getLightType,
 } from '../utils'
-import { ProgressBar } from './ProgressBar'
+import { ProgressBar } from './Progressbar'
 import { Tag } from './Tag'
 import { useState, useMemo } from 'react'
 import { cn } from '@/lib/utils'
