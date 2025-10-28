@@ -16,13 +16,17 @@ import {
 } from '@tanstack/react-query'
 import { BOTANIX_API_URL } from '@/config'
 import { Table } from './components/Table'
+import { ThemeProvider } from './ThemeProvider'
+import { botanixTheme } from './botanix.theme'
 
 const queryClient = new QueryClient()
 
 export const BotanixPage = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <BotanixContent />
+      <ThemeProvider theme={botanixTheme}>
+        <BotanixContent />
+      </ThemeProvider>
     </QueryClientProvider>
   )
 }
