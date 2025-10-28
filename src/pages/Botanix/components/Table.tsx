@@ -83,7 +83,7 @@ export const Table = ({ plants }: { plants: IPlant[] }) => {
 
   return (
     <table>
-      <thead className="text-left text-gray-600 border-b border-gray-200">
+      <thead className="text-left border-b border-gray-200">
         <tr>
           {headers.map((header) => (
             <th key={header.key} className="px-2 pt-2 pb-4">
@@ -98,7 +98,7 @@ export const Table = ({ plants }: { plants: IPlant[] }) => {
                 {header.sortable &&
                   (sorting.key === header.key ? (
                     sorting.direction === 'asc' ? (
-                      <ArrowUpAZ className="w-4 h-4" />
+                      <ArrowUpAZ className="w-4 h-4 " />
                     ) : (
                       <ArrowUpZA className="w-4 h-4" />
                     )
